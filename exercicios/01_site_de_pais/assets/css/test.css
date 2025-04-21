@@ -1,0 +1,149 @@
+/* Cores principais */
+:root {
+    --red-japan: #dc3545;
+    --white: #fff;
+    --gray-light: #f8f9fa;
+    --gray-dark: #343a40;
+    --text: #212529;
+    --highlight: #e63946;
+    --bg-table: #ffffffd2;
+    --border: #dee2e6;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--gray-light);
+    color: var(--text);
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+/* Cabeçalho e navegação */
+header.nav {
+    background-color: var(--red-japan);
+    color: var(--white);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header.nav img.main-logo {
+    height: 60px;
+}
+
+header.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header.nav a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header.nav a:hover {
+    color: var(--gray-dark);
+}
+
+/* Título principal */
+#main-title {
+    text-align: center;
+    padding: 40px 20px 20px;
+    background-color: var(--white);
+}
+
+#main-title h1 {
+    font-size: 2.5rem;
+    color: var(--highlight);
+}
+
+/* Seções */
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+    background-color: var(--white);
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    color: var(--red-japan);
+    margin-bottom: 15px;
+}
+
+section h3 {
+    color: var(--gray-dark);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Parágrafos e pré-formatados */
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+pre {
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-family: monospace;
+    border-left: 4px solid var(--highlight);
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+/* Imagens */
+section img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--bg-table);
+    border: 1px solid var(--border);
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--highlight);
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid var(--border);
+}
+
+table th {
+    background-color: var(--red-japan);
+    color: var(--white);
+}
+
+table tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
