@@ -10,7 +10,7 @@ body {
 
 header, footer {
   height: 100px;
-  background-color: #1abc9c;
+  background-color: #0F641F;
   color: #fff;
   display: flex;
   align-items: center;
@@ -81,13 +81,27 @@ h2, h3, p {
   margin: 10px 0;
 }
 
-.img-main, .img-aside-big {
-  width: 100%;
-  height: 100px;
-  background-color: #aaa;
-  object-fit: cover;
+
+main, aside {
+  padding: 10px;
+  text-align: justify;
+}
+
+
+main {
+  flex: 2;
+  background-color: #fff;
+}
+
+.img-main,
+.img-aside-big {
+  width: 400px;
+  height: 300px;
   border-radius: 5px;
-  margin: 10px 0;
+}
+
+.img-main.power-bi {
+  width: 300px;
 }
 
 .img-aside-litle {
@@ -98,14 +112,21 @@ h2, h3, p {
   margin: 10px 0;
 }
 
-main, aside {
-  padding: 10px;
+.img-container {
+  text-align: center;
+  margin: 20px 0;
 }
 
-main {
-  flex: 2;
-  background-color: #fff;
+.img-title {
+  font-weight: bold;
+  margin-bottom: 5px;
 }
+
+.img-source {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
 
 aside {
   flex: 1;
@@ -158,22 +179,51 @@ footer {
   color: #f0f0f0;
 }
 
+#hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #ddd;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
+  nav {
+    position: relative;
   }
 
-  nav ul {
+  #hamburger {
+    display: block;
+  }
+
+  #nav-links {
+    display: none;
     flex-direction: column;
-    padding: 10px 0;
+    width: 100%;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 1000;
+    border-radius: 0 0 8px 8px;
+  }
+
+  #nav-links.show {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
   }
 
   nav a {
+    display: block;
+    padding: 12px 0;
     width: 100%;
     text-align: center;
-  }
-
-  main, aside {
-    width: 100%;
   }
 }
